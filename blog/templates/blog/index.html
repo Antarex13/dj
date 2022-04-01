@@ -8,9 +8,7 @@
 
 {% block content %}
     <h1 class="mb-5">Posts:</h1>
-    {% for name in names %}
-        <p>
-            {{ name }}
-        </p>
-    {% endfor %}
+        {% for post in page_object.object_list %}
+            {% include 'blog/include/post_card_template.html' %}
+        {% endfor %}
 {% endblock %}
